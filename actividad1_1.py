@@ -8,6 +8,8 @@ for i in range(5):
     edges = cv.Canny(gray,50,150,apertureSize=3)
     lines = cv.HoughLinesP(edges,1,np.pi/180,100,minLineLength=100, maxLineGap=10)
 
+
+
     canny = cv.Canny(gray, 240, 240)
     contours, _ = cv.findContours(canny, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
@@ -32,7 +34,7 @@ for i in range(5):
     cv.waitKey(0)
     cv.destroyAllWindows()
 
-    list_Border = [img, canny, gray]
+    list_Border = [canny]
 
     for j in list_Border:
         # Kernel Definition

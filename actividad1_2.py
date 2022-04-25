@@ -3,12 +3,12 @@ import numpy as np
 
 cap = cv.VideoCapture(0)
 
-def nada():
+def nothing():
     pass
 
 cv.namedWindow("Trackbars")
-cv.createTrackbar("Lower", "Trackbars",120,255,nada)
-cv.createTrackbar("Upper", "Trackbars",120,255,nada)
+cv.createTrackbar("Lower", "Trackbars",120,255,nothing)
+cv.createTrackbar("Upper", "Trackbars",120,255,nothing)
 
 while True:
     _, frame = cap.read()
